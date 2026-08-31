@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <title>Netlify Forms Detection</title>
+</head>
+<body>
+  <!-- Service Request Form Detection -->
+  <form name="service-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+    <input type="hidden" name="form-name" value="service-request" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="service_type" />
+    <input type="text" name="project_location" />
+    <input type="text" name="project_area" />
+    <textarea name="project_description"></textarea>
+    <input type="file" name="attachment" />
+    <input name="bot-field" />
+  </form>
+
+  <!-- Contact Form Detection -->
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+    <input name="bot-field" />
+  </form>
+</body>
+</html>

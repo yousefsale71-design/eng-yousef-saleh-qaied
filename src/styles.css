@@ -1,0 +1,158 @@
+@import "tailwindcss" source("../");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-arabic: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Cairo', system-ui, sans-serif;
+
+  /* Architectural color palette: Deep Navy / Blueprint Blue / Warm Bronze Gold / Off-white */
+  --background: oklch(0.985 0.005 240);
+  --foreground: oklch(0.18 0.03 245);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.03 245);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.03 245);
+  --primary: oklch(0.24 0.06 245);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.94 0.015 240);
+  --secondary-foreground: oklch(0.24 0.06 245);
+  --muted: oklch(0.95 0.01 240);
+  --muted-foreground: oklch(0.48 0.02 240);
+  --accent: oklch(0.72 0.15 75);
+  --accent-foreground: oklch(0.15 0.03 245);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.90 0.01 240);
+  --input: oklch(0.90 0.01 240);
+  --ring: oklch(0.35 0.08 245);
+  --radius: 0.75rem;
+
+  --navy-dark: #0B192C;
+  --navy-light: #1E3E62;
+  --gold-accent: #C59B27;
+  --gold-light: #E0BA53;
+  --slate-bg: #F8FAFC;
+}
+
+.dark {
+  --background: oklch(0.12 0.03 245);
+  --foreground: oklch(0.96 0.01 240);
+  --card: oklch(0.16 0.03 245);
+  --card-foreground: oklch(0.96 0.01 240);
+  --popover: oklch(0.16 0.03 245);
+  --popover-foreground: oklch(0.96 0.01 240);
+  --primary: oklch(0.92 0.02 240);
+  --primary-foreground: oklch(0.14 0.03 245);
+  --secondary: oklch(0.22 0.03 245);
+  --secondary-foreground: oklch(0.96 0.01 240);
+  --muted: oklch(0.22 0.03 245);
+  --muted-foreground: oklch(0.68 0.02 240);
+  --accent: oklch(0.75 0.16 75);
+  --accent-foreground: oklch(0.12 0.03 245);
+  --destructive: oklch(0.45 0.18 27);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.24 0.03 245);
+  --input: oklch(0.24 0.03 245);
+  --ring: oklch(0.72 0.15 75);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+  font-family: var(--font-arabic);
+}
+
+body {
+  @apply m-0 bg-slate-50 text-slate-900 antialiased selection:bg-amber-200 selection:text-slate-900;
+  font-family: var(--font-arabic);
+}
+
+/* Custom architectural grid background */
+.bg-blueprint-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 62, 98, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 62, 98, 0.06) 1px, transparent 1px);
+}
+
+.bg-blueprint-dark-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Glowing gold gradient borders */
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #C59B27 0%, #F5D77F 50%, #B3861B 100%) 1;
+}
+
+/* Glassmorphic card styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(11, 25, 44, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Pulse animation for WhatsApp badge */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-whatsapp-pulse {
+  animation: pulse-subtle 2.5s infinite;
+}
+
+/* Smooth transitions */
+.transition-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-card:hover {
+  transform: translateY(-4px);
+}
