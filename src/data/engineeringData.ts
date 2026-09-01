@@ -195,6 +195,8 @@ export const projectsData: ProjectItem[] = [
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+image
+      
     ],
     description: 'تصميم معماري متكامل لفيلا عائلية خاصة على مساحة 680 متر مربع. تم الاعتماد على الطراز المعماري الحديث مع كتل متداخلة وتكسيات حجرية طبيعية مع الزجاج العازل، وإيجاد فناء داخلي يوفر الخصوصية والتهوية الطبيعية.',
     clientType: 'عميل خاص',
@@ -215,7 +217,7 @@ export const projectsData: ProjectItem[] = [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-    ],
+    ], image: '/3d.jpg
     description: 'دراسة وتصميم برج تجاري إداري يتكون من طابقين تجاريين و 8 طوابق إدارية مفتوحة المساحات (Open Space Offices)، مع توفير مواقف سيارات تحت الأرض وتطبيق أعلى معايير السلامة ومكافحة الحريق.',
     clientType: 'مجموعة استثمارية',
     highlights: ['واجهات زجاجية Curtain Wall ذات كفاءة طاقية', 'مداخل منفصلة للمركز التجاري والمكاتب', 'حساب كميات دقيق ومطابق للمواصفات القياسية'],
